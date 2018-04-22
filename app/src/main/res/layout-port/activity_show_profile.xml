@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
-    tools:context="it.polito.mad.lab1.showProfile">
+    tools:context="it.polito.mad.lab1.ShowProfile">
 
     <ScrollView
         android:layout_width="match_parent"

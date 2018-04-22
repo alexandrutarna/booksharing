@@ -29,7 +29,7 @@ import android.net.Uri;
 
 import static android.content.Intent.createChooser;
 
-public class editProfile extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
 
     static final int GALLERY_REQ = 0;
     static final int CAMERA_REQ = 1;
@@ -153,7 +153,7 @@ public class editProfile extends AppCompatActivity {
                 getResources().getString(R.string.photo),
                 getResources().getString(R.string.cancel)};
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(editProfile.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(EditProfile.this);
         //builder.setTitle("Add Photo!");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
@@ -172,8 +172,8 @@ public class editProfile extends AppCompatActivity {
 
     private void gallery_permission() {
 
-        int permissionReadExternalStorage = ContextCompat.checkSelfPermission(editProfile.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        int permissionWriteExternalStorage = ContextCompat.checkSelfPermission(editProfile.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permissionReadExternalStorage = ContextCompat.checkSelfPermission(EditProfile.this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int permissionWriteExternalStorage = ContextCompat.checkSelfPermission(EditProfile.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
 
         if (permissionReadExternalStorage == PackageManager.PERMISSION_GRANTED && permissionWriteExternalStorage == PackageManager.PERMISSION_GRANTED)
@@ -181,7 +181,7 @@ public class editProfile extends AppCompatActivity {
             gallery();
 
         } else if (permissionReadExternalStorage == PackageManager.PERMISSION_DENIED || permissionWriteExternalStorage == PackageManager.PERMISSION_DENIED)
-            ActivityCompat.requestPermissions(editProfile.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_GALLERY_PERMISSION);
+            ActivityCompat.requestPermissions(EditProfile.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_GALLERY_PERMISSION);
 
     }
 
@@ -194,13 +194,13 @@ public class editProfile extends AppCompatActivity {
 
     private void camera_permission(){
 
-        int permissionReadExternalStorage = ContextCompat.checkSelfPermission(editProfile.this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        int permissionCheckCamera = ContextCompat.checkSelfPermission(editProfile.this, Manifest.permission.CAMERA);
+        int permissionReadExternalStorage = ContextCompat.checkSelfPermission(EditProfile.this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int permissionCheckCamera = ContextCompat.checkSelfPermission(EditProfile.this, Manifest.permission.CAMERA);
 
         if (permissionCheckCamera == PackageManager.PERMISSION_GRANTED && permissionReadExternalStorage == PackageManager.PERMISSION_GRANTED) {
             camera();
         } else if (permissionCheckCamera == PackageManager.PERMISSION_DENIED || permissionReadExternalStorage == PackageManager.PERMISSION_DENIED)
-            ActivityCompat.requestPermissions(editProfile.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
+            ActivityCompat.requestPermissions(EditProfile.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
 
     }
 
