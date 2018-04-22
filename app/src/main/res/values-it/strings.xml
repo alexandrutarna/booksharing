@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="edit">modifica</string>
+    <string name="name">nome</string>
+    <string name="mail">mail</string>
+    <string name="bio">bio</string>
+    <string name="bio_text">bio</string>
+    <string name="done">fatto</string>
+    <string name="preference">preferenze</string>
+    <string name="photo">Fotocamera</string>
+    <string name="gallery">Galleria</string>
+    <string name="cancel">Annulla</string>
+    <string name="saveMessage">Salvato</string>
+
+</resources>

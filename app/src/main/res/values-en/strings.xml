@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="edit">edit</string>
+    <string name="name">name</string>
+    <string name="mail">mail</string>
+    <string name="bio">bio</string>
+    <string name="bio_text">bio</string>
+    <string name="done">done</string>
+    <string name="preference">preference</string>
+    <string name="photo">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="saveMessage">Saved</string>
+</resources>
